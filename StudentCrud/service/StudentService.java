@@ -11,7 +11,9 @@ import java.util.List;
 public class StudentService {
     @Autowired
     private StudentRepository repo;
+
     public List<Student> listAll() {
+
         return repo.findAll();
     }
 
@@ -21,10 +23,27 @@ public class StudentService {
 
     public Student get(long id) {
         return repo.findById(id).get();
-    }
 
+    }
     public void delete(long id) {
+
         repo.deleteById(id);
     }
+
+
+    /*
+
+    @Override
+    public UserDetails loadUserByUsername(String username)
+            throws UsernameNotFoundException {
+        User user = userRepository.getUserByUsername(username);
+
+        if (user == null) {
+            throw new UsernameNotFoundException("Could not find user");
+        }
+
+        return new MyUserDetails(user);
+    }
+     */
 
 }
