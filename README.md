@@ -1,4 +1,4 @@
-# StudentRegistration_SpringBoot_MySql
+# StudentRegistration_SpringBoot_
 
 Student Registration Spring Boot 
 
