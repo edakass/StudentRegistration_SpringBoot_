@@ -27,7 +27,7 @@ public class StudentController {
         System.out.print("Get / ");
         return "index";
     }
-
+    
     @GetMapping("/new")
     public String add(Model model) {
         model.addAttribute("student", new Student());
@@ -55,13 +55,11 @@ public class StudentController {
         attributes.addFlashAttribute("success","The student has deleted !");
         return "redirect:/";
     }
-
     /*
     @ExceptionHandler(StudentAlreadyExistsException.class)
     public ResponseEntity<String> handleCityAlreadyExistsException(StudentAlreadyExistsException ex){
         return new ResponseEntity<>(ex.getMessage(), CONFLICT);
     }
-
-     */
+  */
 
 }
